@@ -1,8 +1,9 @@
-NAME = brainz
+NAME = moar_brainz
 CPPC = c++
 CPPARG = -Wall -Wextra -Werror
 SRCs = main.cpp \
-		Zombie.cpp
+		Zombie.cpp \
+		zombieHorde.cpp
 OBJs = $(SRCs:.cpp=.o)
 
 $(NAME): $(OBJs)
