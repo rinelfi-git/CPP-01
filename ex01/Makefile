@@ -1,6 +1,6 @@
 NAME = moar_brainz
 CPPC = c++
-CPPARG = -Wall -Wextra -Werror
+CPPARG = -Wall -Wextra -Werror -std=c++98
 SRCs = main.cpp \
 		Zombie.cpp \
 		zombieHorde.cpp

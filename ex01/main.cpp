@@ -16,17 +16,18 @@ void	randomChump(std::string name)
 int	main(void)
 {
 	Zombie *joe, *william, *horde;
-	int	i;
+	int	i, length;
 
+	length = 20;
 	joe = newZombie("Joe Dalton");
 	william = newZombie("William Dalton");
-	horde = zombieHorde(20, "Rantamplan");
+	horde = zombieHorde(length, "Rantamplan");
 	randomChump("Jack Dalton");
 	randomChump("Averell Dalton");
 	joe->announce();
 	william->announce();
 	i = -1;
-	while (++i < 20)
+	while (++i < length)
 		horde[i].announce();
 	delete joe;
 	delete william;
