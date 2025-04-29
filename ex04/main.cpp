@@ -51,8 +51,9 @@ int	main(int argc, char **argv)
 		std::cerr << "Too few arguments" << std::endl;
 		return (1);
 	}
+	if (std::string(argv[2]).compare(""))
 	input.open(argv[1]);
-	if (!input.is_open())
+	if (!input.is_open() || input)
 	{
 		std::cerr << "Opening file error" << std::endl;
 		input.close();
