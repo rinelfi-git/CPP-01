@@ -1,6 +1,6 @@
 NAME = this_is_brain
 CPPC = c++
-CPPARG = -Wall -Wextra -Werror
+CPPARG = -Wall -Wextra -Werror -std=c++98
 SRCs = main.cpp
 OBJs = $(SRCs:.cpp=.o)
 
