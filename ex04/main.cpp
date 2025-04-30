@@ -1,5 +1,14 @@
 #include <fstream>
 #include <iostream>
+#include <sys/stat.h>
+
+bool is_directory(char *path) {
+	struct stat	s;
+
+	if (stat(path, &s) == 0)
+		return S_ISDIR(s.st_mode);
+	return false;
+}
 
 bool	processing(std::ifstream &input, std::ofstream &output, char *search, char *replace)
 {
@@ -51,9 +60,16 @@ int	main(int argc, char **argv)
 		std::cerr << "Too few arguments" << std::endl;
 		return (1);
 	}
-	if (std::string(argv[2]).compare(""))
+	if (std::string(argv[2]).compare("") == 0) {
+		std::cerr << "Put at leat a character to replace" << std::endl;
+		return (1);
+	}
+	if (is_directory(argv[1])) {
+		std::cerr << "Directory is not accepted" << std::endl;
+		return (1);
+	}
 	input.open(argv[1]);
-	if (!input.is_open() || input)
+	if (!input || !input.is_open())
 	{
 		std::cerr << "Opening file error" << std::endl;
 		input.close();
