@@ -1,7 +1,8 @@
-NAME = loser
+NAME = harl_2
 CPPC = c++
 CPPARG = -Wall -Wextra -Werror -std=c++98
-SRCs = main.cpp
+SRCs = main.cpp \
+		Harl.cpp
 OBJs = $(SRCs:.cpp=.o)
 
 $(NAME): $(OBJs)
