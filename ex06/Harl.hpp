@@ -16,10 +16,10 @@ class Harl {
 };
 
 enum HarlLevel {
-    Harl_DEBUG,
-    Harl_INFO,
-    Harl_WARN,
-    Harl_ERROR,
-    Harl_UNKNOWN,
+    HarlLevel_DEBUG,
+    HarlLevel_INFO,
+    HarlLevel_WARN,
+    HarlLevel_ERROR,
+    HarlLevel_UNKNOWN,
 };
 #endif

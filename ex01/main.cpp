@@ -5,7 +5,7 @@ int	main(void)
 	Zombie *horde;
 	int	i, length;
 
-	length = -1;
+	length = 20;
 	horde = zombieHorde(length, "Rantamplan");
 	i = -1;
 	while (++i < length)

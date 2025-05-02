@@ -32,36 +32,36 @@ void Harl::_error(void)
 HarlLevel hashString(std::string level)
 {
     if (level == "DEBUG")
-        return Harl_DEBUG;
+        return HarlLevel_DEBUG;
     if (level == "INFO")
-        return Harl_INFO;
+        return HarlLevel_INFO;
     if (level == "WARNING")
-        return Harl_WARN;
+        return HarlLevel_WARN;
     if (level == "ERROR")
-        return Harl_ERROR;
-    return Harl_UNKNOWN;
+        return HarlLevel_ERROR;
+    return HarlLevel_UNKNOWN;
 }
 
 void Harl::complain(std::string level)
 {
     switch (hashString(level))
     {
-    case Harl_DEBUG:
+    case HarlLevel_DEBUG:
         _debug();
         _info();
         _warning();
         _error();
         break;
-    case Harl_INFO:
+    case HarlLevel_INFO:
         _info();
         _warning();
         _error();
         break;
-    case Harl_WARN:
+    case HarlLevel_WARN:
         _warning();
         _error();
         break;
-    case Harl_ERROR:
+    case HarlLevel_ERROR:
         _error();
         break;
     default:
