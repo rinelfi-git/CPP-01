@@ -75,7 +75,7 @@ int	main(int argc, char **argv)
 		input.close();
 		return (2);
 	}
-	output.open(std::string(argv[1]) + ".replace");
+	output.open((std::string(argv[1]) + ".replace").c_str());
 	if (!output.is_open())
 	{
 		std::cerr << "Creating file error" << std::endl;
