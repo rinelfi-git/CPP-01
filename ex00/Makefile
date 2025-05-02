@@ -2,7 +2,9 @@ NAME = brainz
 CPPC = c++
 CPPARG = -Wall -Wextra -Werror -std=c++98
 SRCs = main.cpp \
-		Zombie.cpp
+		Zombie.cpp \
+		newZombie.cpp \
+		randomChump.cpp
 OBJs = $(SRCs:.cpp=.o)
 
 $(NAME): $(OBJs)
